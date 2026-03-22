@@ -1,0 +1,32 @@
+{
+  "app": {
+    "name": "PayQuick",
+    "version": "2.3.1",
+    "environment": "production"
+  },
+  "api": {
+    "base_url": "http://api.payquick.app/v2",
+    "fallback_url": "http://65.2.190.228:8080/v2",
+    "timeout": 30000,
+    "retry_count": 3
+  },
+  "security": {
+    "ssl_pinning": false,
+    "root_detection": false,
+    "emulator_detection": false,
+    "debug_detection": false,
+    "certificate_transparency": false
+  },
+  "features": {
+    "biometric_auth": true,
+    "auto_backup": true,
+    "crash_reporting": true,
+    "analytics": true
+  },
+  "internal": {
+    "admin_endpoint": "http://admin.payquick.app/api",
+    "admin_token": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJ1c2VyIjoic3lzdGVtIn0.fake_admin_jwt_token",
+    "staging_db": "postgres://payquick:Pq$ecure2024@staging-db.payquick.internal:5432/payquick",
+    "redis_url": "redis://default:RedisP@ss123@cache.payquick.internal:6379"
+  }
+}
